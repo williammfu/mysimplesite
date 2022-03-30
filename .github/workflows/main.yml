@@ -19,6 +19,6 @@ jobs:
           path: hello.html
       - uses: JamesIves/github-pages-deploy-action@v4.2.5
         with:
-          branches: gh-pages
+          branch: gh-pages
           folder: .
 
