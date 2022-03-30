@@ -1,0 +1,19 @@
+name: learn-github-actions
+on: 
+  push:
+    branches:
+      gh-pages
+jobs:
+  check-bats-version:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v2
+        with:
+          node-version: '14'
+      - run: npm i -D cowsay
+      - run: npx cowsay `date`>hello.txt
+      - uses: actions/upload-artifact@v3
+        with:
+          name: upload-artifact-from-cowsay
+          path: hello.txt
