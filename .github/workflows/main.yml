@@ -18,4 +18,7 @@ jobs:
           name: upload-artifact-from-cowsay
           path: hello.html
       - uses: JamesIves/github-pages-deploy-action@v4.2.5
+        with:
+          branches: gh-pages
+          folder: .
 
