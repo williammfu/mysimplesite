@@ -4,7 +4,7 @@ on:
     branches:
       main
 jobs:
-  check-bats-version:
+  upload-artifact-and-deploy-job:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
